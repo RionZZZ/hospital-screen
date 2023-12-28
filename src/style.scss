@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  .title {
+    color: #13c6ff;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 6px;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
