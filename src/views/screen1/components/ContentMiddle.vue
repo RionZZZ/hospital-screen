@@ -2,8 +2,9 @@
   <div>
     <ChildrenPie :count="222" :option="pieOption" :data="childrenData" />
     <ChildrenBar :option="barOption" />
-    <div>
+    <div class="middle-bottom">
       <ChildrenInfo />
+      <ChildrenCircle />
     </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import ChildrenPie from "./ChildrenPie.vue";
 import ChildrenBar from "./ChildrenBar.vue";
 import ChildrenInfo from "./ChildrenInfo.vue";
+import ChildrenCircle from "./ChildrenCircle.vue";
 
 const pieOption = {
   series: [
@@ -162,4 +164,9 @@ const barOption = {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.middle-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
