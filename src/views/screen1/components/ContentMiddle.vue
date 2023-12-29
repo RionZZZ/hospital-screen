@@ -2,12 +2,16 @@
   <div>
     <ChildrenPie :count="222" :option="pieOption" :data="childrenData" />
     <ChildrenBar :option="barOption" />
+    <div>
+      <ChildrenInfo />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import ChildrenPie from "./ChildrenPie.vue";
 import ChildrenBar from "./ChildrenBar.vue";
+import ChildrenInfo from "./ChildrenInfo.vue";
 
 const pieOption = {
   series: [

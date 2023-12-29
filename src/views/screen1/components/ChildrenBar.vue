@@ -18,6 +18,6 @@ defineProps<{
   background-image: url("@/assets/children_card.png");
   width: 831px;
   height: 247px;
-  margin: 16px auto;
+  margin: 12px auto;
 }
 </style>
