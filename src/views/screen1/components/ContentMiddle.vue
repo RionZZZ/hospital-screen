@@ -1,17 +1,16 @@
 <template>
   <div>
-    <ChildrenPie :count="222" :option="option" />
+    <ChildrenPie :count="222" :option="option" :data="childrenData" />
   </div>
 </template>
 
 <script setup lang="ts">
 import ChildrenPie from "./ChildrenPie.vue";
-
 const option = {
   series: [
     {
       type: "pie",
-      radius: ["40%", "55%"],
+      radius: ["45%", "65%"],
       label: {
         formatter: "{b}\n{c}",
         fontSize: 14,
@@ -60,7 +59,7 @@ const option = {
               count: {
                 color: "#22E6FF",
                 fontSize: 36,
-                lineHeight: 36
+                lineHeight: 36,
               },
             },
           },
@@ -76,6 +75,13 @@ const option = {
     },
   ],
 };
+
+const childrenData = [
+  { title: "三无", count: 223 },
+  { title: "代养", count: 66 },
+  { title: "科区", count: 99 },
+  { title: "床位", count: 393 },
+];
 </script>
 
 <style lang="scss" scoped></style>
