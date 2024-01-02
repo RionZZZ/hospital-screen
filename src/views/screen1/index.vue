@@ -19,29 +19,22 @@ import { useScale } from "../../utils/scale.ts";
 import ContentLeft from "./components/ContentLeft.vue";
 import ContentMiddle from "./components/ContentMiddle.vue";
 import ContentRight from "./components/ContentRight.vue";
+import dayjs from "dayjs";
 
 useScale();
-
 const currentTime = ref();
 const getTime = () => {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = ("0" + (now.getMonth() + 1)).slice(-2);
-  const day = ("0" + now.getDate()).slice(-2);
-  const hours = ("0" + now.getHours()).slice(-2);
-  const minutes = ("0" + now.getMinutes()).slice(-2);
-  const seconds = ("0" + now.getSeconds()).slice(-2);
-  currentTime.value = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  currentTime.value = dayjs().format("YYYY-MM-DD HH:mm:ss");
 };
 
 const intervalId = ref();
 onMounted(() => {
-   intervalId.value = setInterval(getTime, 1000);
+  intervalId.value = setInterval(getTime, 1000);
 });
 onBeforeUnmount(() => {
-  clearInterval(intervalId.value)
-  intervalId.value = null
-}),
+  clearInterval(intervalId.value);
+  intervalId.value = null;
+});
 </script>
 
 <style lang="scss" scoped>

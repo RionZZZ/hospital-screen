@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:20.10.5"],\
           ["@vitejs/plugin-vue", "virtual:d5432f056e8b2ba5d8c16c8d446bb49bf69173d21d081d9bff7b29c957a53eb5db9f7705e85c415429e125d9423dea6d48e034f61f903e05e487b8607dbea6b2#npm:4.5.2"],\
+          ["dayjs", "npm:1.11.10"],\
           ["echarts", "npm:5.4.3"],\
           ["sass", "npm:1.69.5"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=29ae49"],\
@@ -927,6 +928,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["dayjs", [\
+      ["npm:1.11.10", {\
+        "packageLocation": "../../.yarn/berry/cache/dayjs-npm-1.11.10-2b4382efc1-10c0.zip/node_modules/dayjs/",\
+        "packageDependencies": [\
+          ["dayjs", "npm:1.11.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["de-indent", [\
       ["npm:1.0.2", {\
         "packageLocation": "../../.yarn/berry/cache/de-indent-npm-1.0.2-66cccde30f-10c0.zip/node_modules/de-indent/",\
@@ -1171,6 +1181,7 @@ const RAW_RUNTIME_STATE =
           ["hosptial-screen", "workspace:."],\
           ["@types/node", "npm:20.10.5"],\
           ["@vitejs/plugin-vue", "virtual:d5432f056e8b2ba5d8c16c8d446bb49bf69173d21d081d9bff7b29c957a53eb5db9f7705e85c415429e125d9423dea6d48e034f61f903e05e487b8607dbea6b2#npm:4.5.2"],\
+          ["dayjs", "npm:1.11.10"],\
           ["echarts", "npm:5.4.3"],\
           ["sass", "npm:1.69.5"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=29ae49"],\
