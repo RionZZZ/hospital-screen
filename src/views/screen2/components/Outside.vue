@@ -2,7 +2,12 @@
   <div class="outside card">
     <div class="title">在外住院 111人</div>
     <div class="content">
-      <ECharts :option="hospitalOption" width="100%" height="250px" />
+      <ECharts
+        class="pie"
+        :option="hospitalOption"
+        width="100%"
+        height="250px"
+      />
       <Circle ref="circleRef" width="100%" height="280px" />
     </div>
   </div>
@@ -180,5 +185,8 @@ onMounted(() => {
   background-image: url("@/assets/outside_background.png");
   width: 492px;
   height: 569px;
+  .pie {
+    margin-bottom: -20px;
+  }
 }
 </style>
