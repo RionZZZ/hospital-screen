@@ -171,20 +171,20 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .outside {
-  display: flex;
+  background-image: url("@/assets/outside.png");
   align-items: center;
   justify-content: center;
-  width: 532px;
-  height: 598px;
+  width: 533px;
+  height: 606px;
 }
 .title {
-  font-size: 16px;
-  padding: 11px;
+  padding: 1px;
 }
 .content {
   background-image: url("@/assets/outside_background.png");
   width: 492px;
   height: 569px;
+  margin-top: -4px;
   .pie {
     margin-bottom: -20px;
   }

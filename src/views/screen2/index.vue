@@ -9,7 +9,7 @@
       <div class="content-top">
         <Outside />
         <Statistics :option="pieOption" :statisticsData="statisticsData" />
-        <Outside />
+        <Trend :option="trendOption" :trendData="trendData" />
       </div>
     </div>
   </div>
@@ -21,6 +21,7 @@ import { useScale } from "../../utils/scale.ts";
 import dayjs from "dayjs";
 import Outside from "./components/Outside.vue";
 import Statistics from "./components/Statistics.vue";
+import Trend from "./components/Trend.vue";
 
 useScale();
 const currentTime = ref();
@@ -50,7 +51,7 @@ const pieOption = {
   series: [
     {
       type: "pie",
-      radius: ["45%", "65%"],
+      radius: ["48%", "68%"],
       label: {
         formatter: "{b}\n{c}",
         fontSize: 14,
@@ -223,6 +224,114 @@ const pieOption = {
     },
   ],
 };
+
+const trendOption = {
+  series: [
+    {
+      type: "pie",
+      radius: "70%",
+      label: {
+        formatter: "{b}\n{c}",
+        fontSize: 14,
+        lineHeight: 20,
+      },
+      labelLine: {
+        length: 20,
+        length2: 30,
+      },
+      data: [
+        {
+          value: 46,
+          name: "东城",
+          itemStyle: {
+            color: "#00FFAC",
+            shadowColor: "rgba(0, 120, 102, 0.57)",
+            shadowBlur: 10,
+          },
+          label: {
+            color: "#00FFAC",
+          },
+        },
+        {
+          value: 35,
+          name: "西城",
+          itemStyle: {
+            color: "rgba(143, 183, 255, 0.85)",
+            shadowColor: "#5E84C5",
+            shadowBlur: 10,
+          },
+          label: {
+            color: "#9FC1FE",
+          },
+        },
+        {
+          value: 66,
+          name: "海淀",
+          itemStyle: {
+            color: "#F1AD1D",
+            shadowColor: "#A46F00",
+            shadowBlur: 10,
+          },
+          label: {
+            color: "#FFAD00",
+          },
+        },
+        {
+          value: 89,
+          name: "延庆",
+          itemStyle: {
+            color: "#FF876B",
+            shadowColor: "#B3604F",
+            shadowBlur: 10,
+          },
+          label: {
+            color: "#FE9880",
+          },
+        },
+      ],
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: "rgba(0, 0, 0, 0.5)",
+        },
+      },
+    },
+  ],
+};
+
+const trendData = [
+  {
+    area: "养护一区",
+    count: 8,
+    trend: "隔离",
+  },
+  {
+    area: "养护二区",
+    count: 18,
+    trend: "隔离",
+  },
+  {
+    area: "养护三区",
+    count: 28,
+    trend: "住院",
+  },
+  {
+    area: "养护四区",
+    count: 38,
+    trend: "隔离",
+  },
+  {
+    area: "养护五区",
+    count: 48,
+    trend: "上学",
+  },
+  {
+    area: "养护六区",
+    count: 3,
+    trend: "融合",
+  },
+];
 </script>
 
 <style lang="scss" scoped>

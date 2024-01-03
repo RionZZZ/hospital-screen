@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="children-pie">
-      <ECharts :option="option" width="100%" height="100%" />
+      <ECharts class="pie" :option="option" width="100%" height="100%" />
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ defineProps<{
 <style lang="scss" scoped>
 .children-middle {
   width: 640px;
-  margin-top: 40px;
+  margin-top: 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +81,12 @@ defineProps<{
   }
 }
 .children-pie {
-  width: 610px;
-  height: 342px;
+  width: 606px;
+  height: 343px;
+  background-image: url("@/assets/children_area.png");
+  margin-top: 20px;
+  .pie {
+    margin-top: 15px;
+  }
 }
 </style>
