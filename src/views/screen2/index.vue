@@ -337,6 +337,26 @@ const trendData = [
     count: 3,
     trend: "融合",
   },
+  {
+    area: "养护七区",
+    count: 13,
+    trend: "融合",
+  },
+  {
+    area: "养护八区",
+    count: 14,
+    trend: "融合",
+  },
+  {
+    area: "养护九区",
+    count: 13,
+    trend: "融合",
+  },
+  {
+    area: "养护十区",
+    count: 14,
+    trend: "融合",
+  },
 ];
 
 const option1 = {
