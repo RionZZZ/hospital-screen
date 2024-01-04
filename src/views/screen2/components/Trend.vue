@@ -63,24 +63,22 @@ const scrollTable = () => {
 };
 
 const intervalId = ref();
-onMounted(() => {
+const startAnimate = () => {
   intervalId.value = setInterval(scrollTable, 50);
+};
+const stopAnimate = () => {
+  if (intervalId.value) {
+    clearInterval(intervalId.value);
+    intervalId.value = null;
+  }
+};
+
+onMounted(() => {
+  startAnimate();
 });
 onUnmounted(() => {
-  clearInterval(intervalId.value);
-  intervalId.value = null;
+  stopAnimate();
 });
-const stopAnimate = () => {
-  console.log("stopAnimate");
-
-  clearInterval(intervalId.value);
-  intervalId.value = null;
-};
-const startAnimate = () => {
-  console.log("startAnimate");
-
-  intervalId.value = setInterval(scrollTable, 50);
-};
 </script>
 
 <style lang="scss" scoped>
